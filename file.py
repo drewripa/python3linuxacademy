@@ -1,3 +1,3 @@
-file = open('textfile.txt', 'r')
+my_file = open('textfile.txt', 'r')
 
-file.read()
+print(my_file.read())
