@@ -6,7 +6,7 @@ parser.add_argument('snippet', help='string search in words file')
 args = parser.parse_args()
 snippet = args.snippet.lower()
 
-with open('/usr/share/dicts/words') as f:
+with open('/usr/share/dict/words') as f:
     words = f.readlines()
 
 matches = []
