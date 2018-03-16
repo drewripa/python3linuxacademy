@@ -5,5 +5,5 @@ def _printpi(digits):
     print(str(pi)[:digits+1])
 
 digits = getenv('DIGITS', 10)
-_printpi(digits)
+_printpi(int(digits))
 
