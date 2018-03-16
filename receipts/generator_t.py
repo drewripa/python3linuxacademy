@@ -11,5 +11,5 @@ for ind in range(count):
         'topic': random.choice(words),
         'value': "%.2f" % amount
     }
-    with open(f"./new/receipt-{ind}.json", "w") as f:
+    with open(f"receipt-{ind}.json", "w") as f:
         json.dump(content, f)
