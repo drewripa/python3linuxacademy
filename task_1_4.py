@@ -9,5 +9,5 @@ args = parser.parse_args()
 #I'm using CentOS7 + httpd instead of Python simplehttpserver
 port = 'http' if args.port_number == 80 else args.port_number
 
-print(subprocess.run(["sudo","lsof", "-n", f"-i6TCP:{port}"]).output)
+print(subprocess.run(["sudo","lsof", "-n", f"-i6TCP:{port}"], stdout=subprocess.PIPE))
 
