@@ -2,7 +2,7 @@ import argparse
 import subprocess
 
 parser = argparse.ArgumentParser(description='Process killer aka Hitmen')
-parser.add_argument('port_number', help='Port number for assassination')
+parser.add_argument('port_number', type=int, help='Port number for assassination')
 
 args = parser.parse_args()
 
