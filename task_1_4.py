@@ -10,9 +10,10 @@ args = parser.parse_args()
 port = 'http' if args.port_number == 80 else args.port_number
 
 text = (subprocess.run(["sudo","lsof", "-n", f"-i6TCP:{port}"], stdout=subprocess.PIPE)).stdout
-
+print(text)
 for line in text.splitlines():
     line_args = line.split()
+    print(line_args)
     if line_args[2] == 'root':
         print(f"Killing {line_args[1]} PID")
         subprocess.run(["sudo", "kill", f"{line_args[1]}"])
