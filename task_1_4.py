@@ -11,5 +11,5 @@ port = 'http' if args.port_number == 80 else args.port_number
 
 proc = subprocess.run(["sudo","lsof", "-n", f"-i6TCP:{port}"], stdout=subprocess.PIPE)
 
-print(proc.stdout)
+print(proc.stdout.decode())
 
