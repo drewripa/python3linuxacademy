@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import sys
 
 parser = argparse.ArgumentParser(description='Process killer aka Hitmen')
 parser.add_argument('port_number', type=int, help='Port number for assassination')
@@ -19,4 +20,5 @@ if text:
             break
 else:
     print("Ooops, looks like we have nothing to kill :(")
+    sys.exit(999)
 
