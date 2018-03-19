@@ -20,5 +20,5 @@ if text:
             break
 else:
     print("Ooops, looks like we have nothing to kill :(")
-    sys.exit(999)
+    sys.exit(66)
 
